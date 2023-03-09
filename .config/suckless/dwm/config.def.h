@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "","", "X" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -60,6 +60,9 @@ static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenu
 static const char *termcmd[]       = { "st", NULL };
 static const char *browscmd[]      = { "librewolf", NULL };
 static const char *scrshotcmd[]    = { "flameshot", "gui", NULL };
+static const char *freetubecmd[]   = { "freetube", NULL };
+static const char *vscodecmd[]     = { "code", NULL };
+static const char *golandcmd[]     = { "goland", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -67,6 +70,9 @@ static const Key keys[] = {
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browscmd } },
 	{ MODKEY,                       XK_s,	   spawn,	   {.v = scrshotcmd } },
+	{ MODKEY,                       XK_y,      spawn,          {.v = freetubecmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = vscodecmd } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = golandcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -90,6 +96,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_5,                      4)
+        TAGKEYS(                        XK_6,                      5)
+        TAGKEYS(                        XK_x,                      6)
+        TAGKEYS(                        XK_c,                      7)
+        TAGKEYS(                        XK_v,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
